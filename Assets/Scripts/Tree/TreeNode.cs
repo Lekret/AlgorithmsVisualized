@@ -1,16 +1,16 @@
-﻿using Logic;
+﻿using Nodes;
 using UnityEngine;
 
-namespace View
+namespace Tree
 {
-    public class TreeNodeView : MonoBehaviour, ITreeNode<TreeNodeView>
+    public class TreeNode : MonoBehaviour, ITreeNode<TreeNode>, IHighlightNode
     {
         public MeshRenderer renderer;
-        public TreeNodeView left;
-        public TreeNodeView right;
+        public TreeNode left;
+        public TreeNode right;
 
-        public TreeNodeView Left => left;
-        public TreeNodeView Right => right;
+        public TreeNode Left => left;
+        public TreeNode Right => right;
         
         private void Awake()
         {

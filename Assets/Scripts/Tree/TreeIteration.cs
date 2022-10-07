@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace Logic
+namespace Tree
 {
-    public interface ITreeNode<out T>
-    {
-        T Left { get; }
-        T Right { get; }
-    }
-    
     public static class TreeIteration<T> where T : ITreeNode<T>
     {
         public static void RecPreOrder(T current, List<T> result)
