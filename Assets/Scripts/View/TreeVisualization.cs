@@ -16,6 +16,19 @@ namespace View
         private Coroutine _visualizationRoutine;
         
         [Button]
+        private void PreOrder()
+        {
+            var nodes = new List<TreeNodeView>();
+            TreeIteration<TreeNodeView>.PreOrder(Root, nodes);
+            
+            var recNodes = new List<TreeNodeView>();
+            TreeIteration<TreeNodeView>.RecPreOrder(Root, recNodes);
+            
+            Assert.IsTrue(nodes.SequenceEqual(recNodes));
+            Visualize(nodes);
+        }
+        
+        [Button]
         private void InOrder()
         {
             var nodes = new List<TreeNodeView>();
@@ -25,6 +38,27 @@ namespace View
             TreeIteration<TreeNodeView>.RecInOrder(Root, recNodes);
             
             Assert.IsTrue(nodes.SequenceEqual(recNodes));
+            Visualize(nodes);
+        }
+        
+        [Button]
+        private void PostOrder()
+        {
+            var nodes = new List<TreeNodeView>();
+            TreeIteration<TreeNodeView>.PostOrder(Root, nodes);
+            
+            var recNodes = new List<TreeNodeView>();
+            TreeIteration<TreeNodeView>.RecPostOrder(Root, recNodes);
+            
+            Assert.IsTrue(nodes.SequenceEqual(recNodes));
+            Visualize(nodes);
+        }
+        
+        [Button]
+        private void Traverse()
+        {
+            var nodes = new List<TreeNodeView>();
+            TreeIteration<TreeNodeView>.Traverse(Root, nodes);
             Visualize(nodes);
         }
 
