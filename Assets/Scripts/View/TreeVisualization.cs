@@ -10,7 +10,7 @@ namespace View
 {
     public class TreeVisualization : MonoBehaviour
     {
-        public int HighlightDelay;
+        public float HighlightDelay;
         public TreeNodeView Root;
 
         private Coroutine _visualizationRoutine;
