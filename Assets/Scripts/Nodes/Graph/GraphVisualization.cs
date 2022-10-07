@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
 using EasyButtons;
-using Nodes;
 using UnityEngine;
 
-namespace Graph
+namespace Nodes.Graph
 {
     public class GraphVisualization : MonoBehaviour
     {

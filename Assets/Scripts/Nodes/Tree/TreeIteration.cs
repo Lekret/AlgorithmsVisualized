@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Tree
+namespace Nodes.Tree
 {
     public static class TreeIteration<T> where T : ITreeNode<T>
     {

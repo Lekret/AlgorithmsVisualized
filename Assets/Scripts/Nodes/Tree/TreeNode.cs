@@ -1,7 +1,6 @@
-﻿using Nodes;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Tree
+namespace Nodes.Tree
 {
     public class TreeNode : MonoBehaviour, ITreeNode<TreeNode>, IHighlightNode
     {

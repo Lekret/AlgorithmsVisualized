@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using EasyButtons;
-using Nodes;
 using UnityEngine;
 using UnityEngine.Assertions;
 
-namespace Tree
+namespace Nodes.Tree
 {
     public class TreeVisualization : MonoBehaviour
     {

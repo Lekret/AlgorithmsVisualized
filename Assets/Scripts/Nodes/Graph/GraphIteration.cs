@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Graph
+namespace Nodes.Graph
 {
     public class GraphIteration<T> where T : IGraphNode<T>
     {

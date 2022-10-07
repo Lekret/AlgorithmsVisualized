@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using Nodes;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Graph
+namespace Nodes.Graph
 {
     public class GraphNode : MonoBehaviour, IGraphNode<GraphNode>, IHighlightNode
     {

@@ -1,4 +1,4 @@
-﻿namespace Tree
+﻿namespace Nodes.Tree
 {
     public interface ITreeNode<out T>
     {
