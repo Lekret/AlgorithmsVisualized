@@ -8,17 +8,17 @@ namespace Nodes.Tree
 {
     public class TreeVisualization : MonoBehaviour
     {
-        public IterationVisualizer Visualizer;
+        public PathVisualizer Visualizer;
         public TreeNode Root;
         
         [Button]
         private void PreOrder()
         {
             var nodes = new List<TreeNode>();
-            TreeIteration<TreeNode>.PreOrder(Root, nodes);
+            TreeOps<TreeNode>.PreOrder(Root, nodes);
             
             var recNodes = new List<TreeNode>();
-            TreeIteration<TreeNode>.RecPreOrder(Root, recNodes);
+            TreeOps<TreeNode>.RecPreOrder(Root, recNodes);
             
             Assert.IsTrue(nodes.SequenceEqual(recNodes));
             Visualizer.Visualize(nodes);
@@ -28,10 +28,10 @@ namespace Nodes.Tree
         private void InOrder()
         {
             var nodes = new List<TreeNode>();
-            TreeIteration<TreeNode>.InOrder(Root, nodes);
+            TreeOps<TreeNode>.InOrder(Root, nodes);
             
             var recNodes = new List<TreeNode>();
-            TreeIteration<TreeNode>.RecInOrder(Root, recNodes);
+            TreeOps<TreeNode>.RecInOrder(Root, recNodes);
             
             Assert.IsTrue(nodes.SequenceEqual(recNodes));
             Visualizer.Visualize(nodes);
@@ -41,10 +41,10 @@ namespace Nodes.Tree
         private void PostOrder()
         {
             var nodes = new List<TreeNode>();
-            TreeIteration<TreeNode>.PostOrder(Root, nodes);
+            TreeOps<TreeNode>.PostOrder(Root, nodes);
             
             var recNodes = new List<TreeNode>();
-            TreeIteration<TreeNode>.RecPostOrder(Root, recNodes);
+            TreeOps<TreeNode>.RecPostOrder(Root, recNodes);
             
             Assert.IsTrue(nodes.SequenceEqual(recNodes));
             Visualizer.Visualize(nodes);
@@ -54,7 +54,7 @@ namespace Nodes.Tree
         private void Traverse()
         {
             var nodes = new List<TreeNode>();
-            TreeIteration<TreeNode>.Traverse(Root, nodes);
+            TreeOps<TreeNode>.Traverse(Root, nodes);
             Visualizer.Visualize(nodes);
         }
     }

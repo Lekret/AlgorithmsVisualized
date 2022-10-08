@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Nodes
 {
-    public class IterationVisualizer : MonoBehaviour
+    public class PathVisualizer : MonoBehaviour
     {
         public float HighlightDelay;
         private Coroutine _visualizationRoutine;

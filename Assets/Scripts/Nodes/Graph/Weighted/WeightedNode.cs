@@ -1,15 +1,18 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-namespace Nodes.Graph
+namespace Nodes.Graph.Weighted
 {
-    public class GraphNode : MonoBehaviour, IGraphNode<GraphNode>, IHighlightNode
+    public class WeightedNode : MonoBehaviour,
+        IWeightedNode<WeightedNode, Edge>,
+        IHighlightNode
     {
         public MeshRenderer renderer;
-        public GraphNode[] nodes;
+        public Edge[] edges = Array.Empty<Edge>();
 
-        public IEnumerable<GraphNode> Nodes => nodes;
-        
+        public IEnumerable<Edge> Edges => edges;
+
         private void Awake()
         {
             renderer.material = new Material(renderer.material);
@@ -23,11 +26,11 @@ namespace Nodes.Graph
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.red;
-            foreach (var n in Nodes)
+            foreach (var n in edges)
             {
                 if (n == null)
                     continue;
-                Gizmos.DrawLine(transform.position, n.transform.position);
+                Gizmos.DrawLine(n.transform.position, transform.position);
             }
             Gizmos.color = Color.white;
         }

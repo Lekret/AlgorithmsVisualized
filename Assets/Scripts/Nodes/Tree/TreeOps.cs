@@ -2,7 +2,7 @@
 
 namespace Nodes.Tree
 {
-    public static class TreeIteration<T> where T : ITreeNode<T>
+    public static class TreeOps<T> where T : ITreeNode<T>
     {
         public static void RecPreOrder(T current, List<T> result)
         {
