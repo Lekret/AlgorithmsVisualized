@@ -17,12 +17,5 @@ namespace Nodes.Graph
                 queue.TryDequeue(out current);
             }
         }
-        
-        public static void DijkstraSearch<TNode, TEdge>(TNode start, TNode goal, List<TNode> result) 
-            where TNode : IWeightedNode<TNode, TEdge>
-            where TEdge : IEdge<TNode, TEdge>
-        {
-            
-        }
     }
 }
